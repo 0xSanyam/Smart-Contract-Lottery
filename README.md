@@ -32,11 +32,11 @@ yarn hardhat coverage
 
 1. Setup environment variables
 
-    You'll want to set your `RINKEBY_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file.
+    You'll want to set your `POLYGON_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file.
 
     - `PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)).
 
-    - `RINKEBY_RPC_URL`: This is url of the rinkeby testnet node you're working with. You can get one for free from [Alchemy](https://alchemy.com/)
+    - `POLYGON_RPC_URL`: This is url of the rinkeby testnet node you're working with. You can get one for free from [Alchemy](https://alchemy.com/)
 
 2. Get testnet ETH
 
@@ -52,12 +52,12 @@ You should leave this step with:
 2. Your subscription should be funded with LINK
 3. Deploy
 
-In your `hardhat-helper.ts` add your `subscription Id` under the section of the chainId you're using (that is, if you're deploying to rinkeby, add your `subscription Id` in the `subscriptionId` field under the `4` section.)
+In your `hardhat-helper.js` add your `subscription Id` under the section of the chainId you're using (that is, if you're deploying to rinkeby, add your `subscription Id` in the `subscriptionId` field under the `80001` section.)
 
 Then run:
 
 ```
-yarn hardhat deploy --network rinkeby
+yarn hardhat deploy --network matic
 ```
 
 And copy / remember the contract address.
@@ -81,7 +81,7 @@ And copy / remember the contract address.
     Enter the lottery by running:
 
     ```
-    yarn hardhat run scripts/enter.ts --network rinkeby
+    yarn hardhat run scripts/enter.js --network matic
     ```
 
 ### Estimate gas cost in INR
@@ -92,6 +92,6 @@ Just note, everytime you run your tests it will use an API call, so it might mak
 
 ### Verify on etherscan
 
-If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `ETHERSCAN_API_KEY`. You can add it into your `.env` file.
+If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `POLYGONSCAN_API_KEY`. You can add it into your `.env` file.
 
 In it's current state, if you have your api key set, it will auto verify the contracts!
