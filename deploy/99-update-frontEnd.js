@@ -7,8 +7,8 @@ const FRONT_END_ABI_LOC = "../lottery/constants/abi.json";
 module.exports = async () => {
     if (process.env.UPDATE_FRONT_END) {
         console.log("Updating Front End");
-        updateContractAddress();
-        updateAbi();
+        await updateContractAddress();
+        await updateAbi();
     }
 };
 
