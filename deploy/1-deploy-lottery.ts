@@ -46,7 +46,7 @@ const deployLottery: DeployFunction = async ({ getNamedAccounts, deployments }) 
         waitConfirmations: blockConfirmation || 1,
     });
 
-    if (!localChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
+    if (!localChains.includes(network.name) && process.env.POLYGONSCAN_API_KEY) {
         log("Verifying...");
         await verify(lottery.address, args);
     }
