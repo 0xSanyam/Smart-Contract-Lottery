@@ -1,0 +1,11 @@
+.env
+coverage
+coverage.json
+node_modules
+cache
+artifacts
+cache
+.vscode
+deployments
+gas-report.txt
+*.log
