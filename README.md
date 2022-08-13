@@ -5,7 +5,7 @@
 Clone the repo
 
 ```
-git clone https://github.com/0xSanyam/Smart-Contract-Lottery
+git clone https://github.com/0xSanyam/Smart-Contract-Lottery.git
 ```
 
 Typescript
