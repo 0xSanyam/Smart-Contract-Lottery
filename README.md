@@ -98,8 +98,14 @@ To get the INR estimation of gas cost, you'll need a `COINMARKETCAP_API_KEY` env
 
 Just note, everytime you run your tests it will use an API call, so it might make sense to have coinmarketcap disabled until you need it. You can disable it by just commenting the line out.
 
-### Verify on etherscan
+### Verify on polygonscan
 
-If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `POLYGONSCAN_API_KEY`. You can add it into your `.env` file.
+If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://polygonscan.com/myapikey) from PolygonScan and set it as an environemnt variable named `POLYGONSCAN_API_KEY`. You can add it into your `.env` file.
 
 In it's current state, if you have your api key set, it will auto verify the contracts!
+
+However, you can manual verify with:
+
+```
+yarn hardhat verify --constructor-args arguments DEPLOYED_CONTRACT_ADDRESS
+```
